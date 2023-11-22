@@ -1,11 +1,11 @@
     <!-- Please remove this file from your project -->
     <template>
-        <div class="flex w-[calc((100%-72px)/4)] py-6 pl-6 pr-4 flex-col jsutify-center items-start gap-12 rounded-s-xl bg-white">
+        <div class="flex w-[calc((100%-72px)/4)] py-6 pl-6 pr-4 flex-col shadow-custom jsutify-center items-start gap-12 rounded-s-xl bg-white">
             <div class="flex justify-between items-start self-stretch">
                 <div class="flex items-start gap-4">
                     <div class="flex w-14 h-14 p-2 justify-center items-center gap-[10px] rounded-full bg-[#BFDFFF]">
                         <div class="w-10 h-10 flex p-2 justify-center items-center gap-[10px] rounded-full bg-[#007FFF]">
-                            <img :src="total_order_img_url" class="w-6 h-6"/>
+                            <img :src="order_img_url" class="w-6 h-6"/>
                         </div>
                     </div>
 
@@ -15,7 +15,7 @@
                         </p>
                         
                         <p class="text-grey font-Poppins text-2xl not-italic">
-                            {{ total_order_value }}
+                            {{ order_value.toLocaleString() }}
                         </p>
                     </div>
                 </div>
@@ -54,8 +54,8 @@
         },
 
         props: {
-            total_order_img_url: String,
-            total_order_value: Number,
+            order_img_url: String,
+            order_value: Number,
             more_vertical_icon_url: String,
             order_arrow_icon_url: String
         }

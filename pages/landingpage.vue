@@ -3,8 +3,9 @@
         <div>
             <Header/>
             <div class="px-[264px] pt-[70px] pb-[400px] min-h-screen sm:items-center bg-[#F9F9F9] gap-6">
-                
-                <order-card :total_order_img_url="total_order_img_url" :total_order_value="total_order_value" :more_vertical_icon_url="more_vertical_icon_url" :order_arrow_icon_url="order_arrow_icon_url"/>
+                <div class="flex gap-8 justify-between">
+                        <order-card v-for="(data, index) in order_card_data" :key="index" :order_img_url="data.order_icon_url" :order_value="data.order_value" :more_vertical_icon_url="data.more_vertical_icon_url" :order_arrow_icon_url="data.order_arrow_icon_url"/>
+                </div>
             </div>
         </div>
     </template>       
@@ -17,21 +18,12 @@
             name: 'landingpage',
             components: { OrderCard, Header },
             async fetch() {
-                const orderResponse = await this.$axios.$get('/mock data/orderData.json');
-                console.log("json data>>>>", orderResponse);
-                this.total_order_value = orderResponse.total_order_value;
-                this.total_order_img_url = orderResponse.total_order_img_url;
-                this.more_vertical_icon_url = orderResponse.more_vertical_icon_url;
-                
-
-                console.log("total order value>>>", this.total_order_value);
+                this.order_card_data = await this.$axios.$get('/mock data/orderData.json');
+                 
             },
             data() {
                 return {
-                    total_order_img_url:"/img/total-order-image.svg",
-                    more_vertical_icon_url:"/img/more-vertical.svg",
-                    total_order_value:this.total_order_value,
-                    order_arrow_icon_url: "/img/arrow-right.svg"
+                    order_card_data: this.order_card_data 
                 };
             },
         }

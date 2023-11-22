@@ -1,9 +1,26 @@
-{
-    "total_order_value":257,
-    "Gross_Revenue":38341.62,
-    "avg_order_value": 574,
-    "returns": 16,
-    "total_order_img_url":"/img/total-order-image.svg",
-    "more_vertical_icon_url":"/img/more-vertical.svg",
-    "order_arrow_icon_url": "/img/arrow-right.svg"
-}
+[
+    {
+        "order_value":257,
+        "order_icon_url":"/img/total-order-image.svg",
+        "more_vertical_icon_url":"/img/more-vertical.svg",
+        "order_arrow_icon_url": "/img/arrow-right.svg"
+    },
+    {
+        "order_value":38341.62,
+        "more_vertical_icon_url":"/img/more-vertical.svg",
+        "order_arrow_icon_url": "/img/arrow-right.svg",
+        "order_icon_url": "/img/hart-histogram-simple.svg"
+    },
+    {
+        "order_value": 574,
+        "more_vertical_icon_url":"/img/more-vertical.svg",
+        "order_arrow_icon_url": "/img/arrow-right.svg",
+        "order_icon_url": "/img/file-upload 3.svg" 
+    },
+    {
+        "order_value": 16,
+        "more_vertical_icon_url":"/img/more-vertical.svg",
+        "order_arrow_icon_url": "/img/arrow-right.svg",
+        "order_icon_url": "/img/arrow-back.svg"
+    }
+]
