@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div class="">
-                    <img :src="more_vertical_icon_url" class="w-6 h-6"/>
+                    <img src="/img/more-vertical.svg" class="w-6 h-6"/>
                 </div>
             </div>
 
@@ -33,7 +33,7 @@
 
                 <div class="flex items-center gap-8">
                     <p class="text-grey font-Poppins text-sm font-medium">More</p>
-                    <img :src="order_arrow_icon_url" class="w-4 h-4"/>
+                    <img src="/img/arrow-right.svg" class="w-4 h-4"/>
                 </div>
             </div>
             
@@ -56,8 +56,6 @@
         props: {
             order_img_url: String,
             order_value: Number,
-            more_vertical_icon_url: String,
-            order_arrow_icon_url: String,
             title: String,
             icon_color1:String,
             icon_color2: String

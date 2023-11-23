@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt dev",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "apexcharts": "^3.44.0",
     "core-js": "^3.25.3",
-    "nuxt": "^2.15.8",
+    "nuxt": "^3.8.2",
     "vue": "^2.7.10",
+    "vue-apexcharts": "^1.6.2",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"
   },
@@ -24,8 +26,8 @@
     "babel-jest": "^29.1.2",
     "jest": "^29.1.2",
     "jest-environment-jsdom": "^29.1.2",
-    "nuxt-svg-loader": "^1.2.0",
+    "nuxt-svg-loader": "^0.1.0",
     "postcss": "^8.4.17",
-    "vue-jest": "^3.0.4"
+    "vue-jest": "^3.0.0"
   }
 }
